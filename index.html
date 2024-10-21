@@ -1,67 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrian Jozwiak</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <header>
-        <h1>Adrian Jozwiak</h1>
-        <p>Hello, I'm an under-graduate student in England, currently studying 6 A-Levels. My hobbies include web-design and video-game development.</p>
+<body class="bg-white dark:bg-[#0a0a0a] barlow-medium scroll-smooth text-lg dark:text-[#ddd]">
+    <header class="bg-white fixed w-full h-[60px] flex items-center justify-center z-50 dark:bg-[#0a0a0a]">
+      <div class="text-lg w-full h-full max-w-4xl flex items-center justify-between px-8 py-3 border-b border-b-gray-300 dark:border-b-[#333]">
+        <div class="flex items-center justify-center gap-8">
+          <a href="" class="text-[#ff4900]">About</a>
+          <div class="link-soon">
+            <div class="items">
+              <p>Projects</p>
+              <p>Soon!</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-8 items-center justify-center">
+            <a href="https://uk.linkedin.com/in/panooley">LinkedIn</a>
+          <button class="copy-email text-white bg-[#111] dark:bg-[#fff] dark:text-[#111] h-9 w-[115px] rounded-full duration-300 hover:text-[#888]">
+            <p class="-translate-y-px">Copy Email</p>
+          </button>
+          <button class="duration-300 hover:text-[#888] dark-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="hidden dark:block w-5 h-5 transform -rotate-90"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="dark:hidden w-5 h-5"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+      </div>
     </header>
-    <main>
-        <section>
-            <h2>Experience</h2>
-            <h3>Mary Ann Evans Hospice Shop, CV1 1FJ</h3>
-            <p>I'm currently volunteering at this shop. My work mainly consists of managing the till and transactions, I also take care of how the front of the shop looks, sorting items and cleaning.</p>
-        </section>
-        <section>
-            <h2>Education</h2>
-            <h3>Cardinal Wiseman Catholic School</h3>
-            <p>Excelled with 5 grade 9 in Mathematics, Further Mathematics, Polish, Computer Science and Physics at GCSE, partaking in many extracurricular activities including: The Wizard of OZ play, DoFE and supporting students. </p>
-            <p>Currently studying A-Levels, My Subjects:
-                <ul>
-                    <li>Mathematics</li>
-                    <li>Futher Mathematics*</li>
-                    <li>Physics</li>
-                    <li>Chemistry</li>
-                    <li>Polish</li>
-                    <li>Computer Science</li>
-                </ul>
-                <p>* at Blue Coat Church of England</p>
-            </p>
-        </section>
-        <section>
-            <h2>Awards</h2>
-            <h4>Ranked 1st from GCSE results in my year.</h4>
-            <h4>Competed in UKMT Senior Mathematics Challenge</h4>
-            <h4>SmallPiece Trust, Aircraft Challenge</h4>
-            <p>13th January 2022</p>
-            <h3>2x Snow Camp</h3>
-            <p>2 Day First Tracks cource. 5th January & 26th July 2024</p>
-        </section>
+    
+    <button class="hidden absolute top-8 right-8 duration-300 hover:text-[#888] dark-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="hidden dark:block w-5 h-5 transform -rotate-90"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="dark:hidden w-5 h-5"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </button>
+
+    <main class="w-full">
+      <section id="pagetop" class="tw-full h-screen flex flex-col items-center justify-evenly px-6">
+        <div class="text-center max-w-[480px]">
+          <span id="title-pic" class="w-12 h-12 rounded-full hidden mb-4 overflow-hidden">
+            <img src="pic.png" alt="" class="w-full h-full">
+          </span>
+          <h1 class="text-6xl mb-4 dark:text-white">Hey, I'm <span id="inline-pic" class="inline-block overflow-hidden w-[72px] h-12 rounded-full translate-y-1"><img class="w-full -translate-y-2 bg-contain" src="pic.png" alt=""></span> Adrian</h1>
+          <p class="text-xl text-[#333] dark:text-[#aaa] leading-relaxed">I'm an under-graduate student in England, currently studying 6 A-Levels. My hobbies include web-design and video-game development.</p>
+          <div id="links" class="hidden gap-4 text-[#333] dark:text-[#ddd]">
+            <a class="copy-email cursor-pointer">Email</a>
+            <a href="https://uk.linkedin.com/in/panooley">LinkedIn</a>
+          </div>
+        </div>
+        <a href="#experience" id="tooltip" class="flex flex-col items-center justify-center cursor-pointer relative hover:text-gray-800 duration-300 dark:hover:text-[#aaa]">
+          <p>Experience & Education</p>
+          <div class="h-12 w-52 absolute flex items-end justify-center translate-y-0 hover:translate-y-3 duration-300">
+            <div class="rotate-90 w-4 h-4">
+              <svg viewBox="0 0 16 16"><path d="M 6 4 L 10 8 L 6 12" fill="transparent" stroke-width="1.3" stroke="currentColor" stroke-miterlimit="10" stroke-dasharray=""></path></svg>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <section id="experience" class="bg-gray-50 w-full py-12 flex items-center justify-center px-6 dark:bg-black">
+        <div class="w-full max-w-lg">
+          <h1 class="text-3xl text-center mb-12 dark:text-white">Experience & Education</h1>
+          <a href="https://www.maryannevans.org.uk/" class="text-2xl dark:text-white">Mary Ann Evans Hospice</a>
+          <h2 class="text-sm">September 2024 - Present</h2>
+          <p class="leading-relaxed my-2">I'm currently volunteering at this shop. My work mainly consists of managing the till and transactions, I also take care of how the front of the shop looks, sorting items and cleaning.</p>
+          <a href="https://cardinalwiseman.coventry.sch.uk/" class="text-2xl dark:text-white">Cardinal Wiseman Catholic School</a>
+          <h2 class="text-sm">June 2021 - July 2024</h2>
+          <p class="leading-relaxed mt-2">Excelled with 5 grade 9s in: Mathematics, Further Mathematics, Polish, Computer Science and Physics at GCSE, partaking in many extracurricular activities including: The Wizard of OZ play, DoFE and supporting students.</p>
+          <p class="mt-2 dark:text-white">My Subjects:</p>
+          <ul class="list-disc list-inside">
+            <li>Mathematics</li>
+            <li>Futher Mathematics*</li>
+            <li>Physics</li>
+            <li>Chemistry</li>
+            <li>Polish</li>
+            <li>Computer Science</li>
+          </ul>
+          <p>* at Blue Coat Church of England</p>
+        </div>
+      </section>
+
+      <section id="awards" class="tw-full flex flex-col items-center justify-evenly px-6 py-12 bg-black text-white">
+        <div class="w-full max-w-lg">
+          <h1 class="text-3xl text-center mb-12 dark:text-white">Awards</h1>
+          <h2 class="text-xl">Ranked 1st from GCSE results in my year.</h2>
+          <h2 class="text-xl mt-2">Competed in UKMT Senior Mathematics Challenge</h2>
+          <h2 class="text-xl mt-2">SmallPiece Trust, Aircraft Challenge</h2>
+          <p class="text-sm">13th January 2022</p>
+          <h2 class="text-xl mt-2">Snow Camp, 2 Day First Tracks</h2>
+          <p class="text-sm">5th January & 26th July 2024</p>
+        </div>    
+      </section>
+
     </main>
-    <footer>
-        <h2>Contact</h2>
-        <a href="mailto:adrian.jozwiak2008@gmail.com">Email</a>
-        <a href="https://linkedin.com/in/panooley">LinkedIn</a>
-        <a href="https://www.github.com/panooley">Github</a>
-        <a href="AdrianJozwiak_CV.pdf">Resume</a>
+
+    <footer class="text-white w-full h-[60px] flex items-center justify-center bg-black">
+      <div class="text-lg w-full h-full max-w-4xl flex items-center justify-between px-8 py-3 border-t border-t-gray-800">
+          <a href="#pagetop" class="hover:text-[#888]" id="btt">Back To Top</a>
+        <div class="links flex gap-8 items-center justify-center">
+          <a href="AdrianJozwiak_CV.pdf">Resume</a>
+          <a href="https://uk.linkedin.com/in/panooley">LinkedIn</a>
+          <a href="mailto:hell@panooley.com">hello@panooley.com</a>
+        </div>
+      </div>
     </footer>
-    <style>
-        body {
-            background: #fff;
-            color: #3c3836;
-            font-family: 'Courier New', Courier, monospace;
-            margin: 1rem auto;
-            max-width: 600px;
-            line-height: 1.6rem;
-            font-size: 18px;
-            padding: 0 8px
-        }
-        header,footer,main { padding: 1rem 2rem; }
-        /* h1,h2,h3 { line-height:1.2; rotate: -1deg; } */
-    </style>
+
+    <script>
+      const HTML = document.getRootNode().childNodes[1];
+      HTML.className = window.matchMedia("prefers-color-scheme: dark") ? "dark" : "";
+      let t = document.getElementsByClassName("dark-toggle");
+      for (let j = 0; j < t.length; j++) {t.item(j).addEventListener('click', ()=> {HTML.className = HTML.className == "dark" ? "" : "dark";})}
+      let e = document.getElementsByClassName("copy-email");
+      for (let j = 0; j < e.length; j++) {e.item(j).addEventListener('click', ()=> {navigator.clipboard.writeText("hello@panooley.com")})}
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+        });
+      });
+
+    </script>
 </body>
 </html>
