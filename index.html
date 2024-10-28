@@ -19,7 +19,7 @@
         </div>
         <div class="flex gap-8 items-center justify-center">
             <a href="https://uk.linkedin.com/in/panooley">LinkedIn</a>
-          <button class="copy-email text-white bg-[#111] dark:bg-[#fff] dark:text-[#111] h-9 w-[115px] rounded-full duration-300 hover:text-[#888]">
+          <button id="copy-email" class="text-white bg-[#111] dark:bg-[#fff] dark:text-[#111] h-9 w-[115px] rounded-full duration-300 hover:text-[#888] focus:bg-none foucs:text-[#ff4900]">
             <p class="-translate-y-px">Copy Email</p>
           </button>
           <button class="duration-300 hover:text-[#888] dark-toggle">
@@ -44,7 +44,7 @@
           <h1 class="text-6xl mb-4 dark:text-white">Hey, I'm <span id="inline-pic" class="inline-block overflow-hidden w-[72px] h-12 rounded-full translate-y-1"><img class="w-full -translate-y-2 bg-contain" src="pic.png" alt=""></span> Adrian</h1>
           <p class="text-xl text-[#333] dark:text-[#aaa] leading-relaxed">I'm an under-graduate student in England, currently studying 6 A-Levels. My hobbies include web-design and video-game development.</p>
           <div id="links" class="hidden gap-4 text-[#333] dark:text-[#ddd]">
-            <a class="copy-email cursor-pointer">Email</a>
+            <a href="mailto:hello@panooley.com" class="cursor-pointer">Email</a>
             <a href="https://uk.linkedin.com/in/panooley">LinkedIn</a>
           </div>
         </div>
@@ -52,13 +52,14 @@
           <p>Experience & Education</p>
           <div class="h-12 w-52 absolute flex items-end justify-center translate-y-0 hover:translate-y-3 duration-300">
             <div class="rotate-90 w-4 h-4">
-              <svg viewBox="0 0 16 16"><path d="M 6 4 L 10 8 L 6 12" fill="transparent" stroke-width="1.3" stroke="currentColor" stroke-miterlimit="10" stroke-dasharray=""></path></svg>
+              <svg width="16px" height="16px" viewBox="0 0 16 16"><path d="M 6 4 L 10 8 L 6 12" fill="transparent" stroke-width="1.3" stroke="currentColor" stroke-miterlimit="10" stroke-dasharray=""></path></svg>
             </div>
           </div>
         </a>
       </section>
 
-      <section id="experience" class="bg-gray-50 w-full py-12 flex items-center justify-center px-6 dark:bg-black">
+      <section class="bg-gray-50 w-full py-12 flex items-center justify-center px-6 dark:bg-[#111] relative">
+        <div class="absolute top-[-60px] left-1/2 w-px h-px" id="experience"></div>
         <div class="w-full max-w-lg">
           <h1 class="text-3xl text-center mb-12 dark:text-white">Experience & Education</h1>
           <a href="https://www.maryannevans.org.uk/" class="text-2xl dark:text-white">Mary Ann Evans Hospice</a>
@@ -80,7 +81,7 @@
         </div>
       </section>
 
-      <section id="awards" class="tw-full flex flex-col items-center justify-evenly px-6 py-12 bg-black text-white">
+      <section id="awards" class="tw-full flex flex-col items-center justify-evenly px-6 py-12">
         <div class="w-full max-w-lg">
           <h1 class="text-3xl text-center mb-12 dark:text-white">Awards</h1>
           <h2 class="text-xl">Ranked 1st from GCSE results in my year.</h2>
@@ -94,24 +95,37 @@
 
     </main>
 
-    <footer class="text-white w-full h-[60px] flex items-center justify-center bg-black">
-      <div class="text-lg w-full h-full max-w-4xl flex items-center justify-between px-8 py-3 border-t border-t-gray-800">
+    <footer class="w-full h-[60px] flex items-center justify-center text-[#333] dark:bg-[#111] dark:text-white">
+      <div class="text-lg w-full h-full max-w-4xl flex items-center justify-between px-8 py-3 border-t border-t-gray-300 dark:border-t-gray-800">
           <a href="#pagetop" class="hover:text-[#888]" id="btt">Back To Top</a>
         <div class="links flex gap-8 items-center justify-center">
           <a href="AdrianJozwiak_CV.pdf">Resume</a>
           <a href="https://uk.linkedin.com/in/panooley">LinkedIn</a>
-          <a href="mailto:hello@panooley.com">hello@panooley.com</a>
+          <a href="mailto:hell@panooley.com">hello@panooley.com</a>
         </div>
       </div>
     </footer>
 
+    <!-- <div class="fixed flex gap-4 top-4 right-4 p-4 bg-[#111] text-[#eee] rounded-md z-50">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+        <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+      </svg>
+      <div class="flex flex-col">
+        <p class="text-sm">Succesfuly copied!</p>
+        <p class="text-sm">You can now paste it in your email client.</p>
+      </div>
+    </div> -->
+    
+
     <script>
+      document.getElementById("copy-email").addEventListener('click', () => {
+        navigator.clipboard.writeText("hello@panooley.com")
+      })
       const HTML = document.getRootNode().childNodes[1];
-      HTML.className = window.matchMedia("prefers-color-scheme: dark") ? "dark" : "";
       let t = document.getElementsByClassName("dark-toggle");
       for (let j = 0; j < t.length; j++) {t.item(j).addEventListener('click', ()=> {HTML.className = HTML.className == "dark" ? "" : "dark";})}
-      let e = document.getElementsByClassName("copy-email");
-      for (let j = 0; j < e.length; j++) {e.item(j).addEventListener('click', ()=> {navigator.clipboard.writeText("hello@panooley.com")})}
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
